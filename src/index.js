@@ -1,0 +1,1 @@
+alert(`It's a me wario!`)
