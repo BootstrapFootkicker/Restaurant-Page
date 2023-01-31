@@ -1,3 +1,40 @@
-.content-stuff{
-  background-color: red;
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+
+
+}
+
+.content {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
+
+}
+
+.header-container {
+    width: 100%;
+
+
+
+}
+
+.header-links, .footer-links {
+    display: flex;
+    gap: 20px;
+
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}
+
+ul {
+    list-style: none;
 }
