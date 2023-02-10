@@ -2,6 +2,9 @@ body {
     padding: 0;
     margin: 0;
     height: 100vh;
+    background-image: url("./drew-coffman-jUOaONoXJQk-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 
 
 }
@@ -16,9 +19,9 @@ body {
 
 }
 
-.header-container {
+.header-container,.footer-container {
     width: 100%;
-
+    background-color:#121e26;
 
 
 }
@@ -38,3 +41,33 @@ body {
 ul {
     list-style: none;
 }
+
+
+/*.section-1, .section-2, .section-3, .section-4 {*/
+/*    min-height: 5rem;*/
+/*    height: 40rem;*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: 100% 100%;*/
+
+/*    width: 100%;*/
+/*    outline: solid red 5px;*/
+/*}*/
+
+
+/*.section-1 {*/
+/*    background-image: url("./skyline.jpg");*/
+
+/*}*/
+
+/*.section-2 {*/
+/*    background-image: url("./burger.jpg");*/
+/*}*/
+
+/*.section-3{*/
+/*    background-image: url("./color-food.jpg");*/
+/*}*/
+/*.section-4{*/
+/*    background-image: url("./restaurant.jpg");*/
+/*}*/
+
+
