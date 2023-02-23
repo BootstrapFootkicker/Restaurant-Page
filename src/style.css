@@ -2,7 +2,7 @@ body {
     padding: 0;
     margin: 0;
     height: 100vh;
-    background-image: url("./drew-coffman-jUOaONoXJQk-unsplash.jpg");
+    /*background-image: url("./drew-coffman-jUOaONoXJQk-unsplash.jpg");*/
     background-repeat: no-repeat;
     background-size: 100% 100%;
     font-family: 'Ultra', serif;
@@ -16,7 +16,6 @@ body {
     flex-direction: column;
     height: 100%;
     width: 100%;
-    gap: 20px;
 
 
 }
@@ -74,8 +73,14 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 25%;
-    outline: red solid 5px;
+    height: 35%;
+    padding: 25px;
+    background-image: url("./vegetables-set-left-black-slate.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+
 
 }
 
@@ -90,7 +95,7 @@ body {
     gap: 10px;
     color: #f4efeb;
     /*background-color: #121e26;*/
-    background-color: rgba(18,30,38,.90);
+    background-color: rgba(18, 30, 38, .90);
     border-radius: 45px;
 
 
@@ -99,6 +104,7 @@ body {
 
 
 .welcome-text-container {
+
     font-size: 3rem;
     transform: translateY(20px);
 
