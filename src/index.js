@@ -171,10 +171,53 @@ function createSection3() {
     return section3;
 }
 
+function createFooter() {
+    let footerContainer = document.createElement("footer");
+    let footerLinks = document.createElement("ul");
+    let copyright= document.createElement("div");
+    let link1 = document.createElement("li");
+    let link2 = document.createElement("li");
+    let link3 = document.createElement("li");
+    let link4 = document.createElement("li");
+    let link5 = document.createElement("li");
+    let link6 = document.createElement("li");
+    let link7 = document.createElement("li");
+
+    footerContainer.classList.add("footer-container");
+    footerLinks.classList.add("footer-links");
+
+
+    copyright.innerText="Copyright";
+    link1.innerText = "ABOUT US";
+    link2.innerText = "CAREERS";
+    link3.innerText = "FRANCHISE";
+    link4.innerText = "MERCHANDISE";
+    link5.innerText = "BLOG";
+    link6.innerText = "CONTACT US";
+    link7.innerText = "PRIVACY POLICY";
+
+    footerLinks.appendChild(link1);
+    footerLinks.appendChild(link2);
+    footerLinks.appendChild(link3);
+    footerLinks.appendChild(link4);
+    footerLinks.appendChild(link5);
+    footerLinks.appendChild(link6);
+    footerLinks.appendChild(link7);
+
+
+    footerContainer.appendChild(footerLinks);
+
+
+
+    return footerContainer;
+
+}
+
 contentDiv.appendChild(createHeader());
 contentDiv.appendChild(createSection1());
 contentDiv.appendChild(createSection2());
 contentDiv.appendChild(createSection3());
+contentDiv.appendChild(createFooter());
 
 document.body.appendChild(contentDiv);
 
