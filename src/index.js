@@ -82,7 +82,7 @@ function createSection2() {
     let img2 = document.createElement("img");
 
     img1.src = "./be92fbb6cb9b04656d9b.jpg";
-    img2.src = "./61e4c40dcd1384d48878.jpg";
+    img2.src = "./cb9a96b04a29f4e5829e.jpg";
 
 
     leftSideTitle.innerText = "Discover"
@@ -123,9 +123,58 @@ function createSection2() {
     return section2;
 }
 
+
+function createSection3() {
+    let section3 = document.createElement("div");
+    let section3TitleContainer = document.createElement("div");
+    let section3Title1 = document.createElement("div");
+    let section3Title2 = document.createElement("div");
+
+    let section3Images = document.createElement("div");
+
+    let img1 = document.createElement("img");
+    let img2 = document.createElement("img");
+    let img3 = document.createElement("img");
+    let img4 = document.createElement("img");
+    let img5 = document.createElement("img");
+    let img6 = document.createElement("img");
+
+    img1.src = "./be92fbb6cb9b04656d9b.jpg";
+    img2.src = "./61e4c40dcd1384d48878.jpg";
+    img3.src = "./fd117713b9d4470383c2.jpg";
+    img4.src = "./101079855cc9f5d1b3c0.jpg";
+    img5.src = "./f0a4ee7835343e4c4d13.jpg";
+    img6.src = "./5949894e6aee6ae648c1.jpg";
+
+
+    section3Title1.innerText = "Instagram";
+    section3Title2.innerText = "Happenings";
+
+    section3TitleContainer.appendChild(section3Title1);
+    section3TitleContainer.appendChild(section3Title2);
+
+    section3Images.appendChild(img1);
+    section3Images.appendChild(img2);
+    section3Images.appendChild(img3);
+    section3Images.appendChild(img4);
+    section3Images.appendChild(img5);
+    section3Images.appendChild(img6);
+
+    section3.classList.add("section-3");
+    section3Images.classList.add("section-3-images");
+    section3TitleContainer.classList.add("section-3-title-container");
+
+
+    section3.appendChild(section3TitleContainer);
+    section3.appendChild(section3Images);
+
+    return section3;
+}
+
 contentDiv.appendChild(createHeader());
 contentDiv.appendChild(createSection1());
-contentDiv.appendChild(createSection2())
+contentDiv.appendChild(createSection2());
+contentDiv.appendChild(createSection3());
 
 document.body.appendChild(contentDiv);
 
