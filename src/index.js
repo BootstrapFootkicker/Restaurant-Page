@@ -1,8 +1,6 @@
 import './style.css'
 import _ from 'lodash';
 
-let contentDiv = document.createElement("div");
-contentDiv.classList.add('Content');
 
 function createHeader() {
 
@@ -174,7 +172,7 @@ function createSection3() {
 function createFooter() {
     let footerContainer = document.createElement("footer");
     let footerLinks = document.createElement("ul");
-    let copyright= document.createElement("div");
+    let copyright = document.createElement("div");
     let link1 = document.createElement("li");
     let link2 = document.createElement("li");
     let link3 = document.createElement("li");
@@ -187,7 +185,7 @@ function createFooter() {
     footerLinks.classList.add("footer-links");
 
 
-    copyright.innerText="Copyright";
+    copyright.innerText = "Copyright";
     link1.innerText = "ABOUT US";
     link2.innerText = "CAREERS";
     link3.innerText = "FRANCHISE";
@@ -208,21 +206,28 @@ function createFooter() {
     footerContainer.appendChild(footerLinks);
 
 
-
     return footerContainer;
 
 }
 
-contentDiv.appendChild(createHeader());
-contentDiv.appendChild(createSection1());
-contentDiv.appendChild(createSection2());
-contentDiv.appendChild(createSection3());
-contentDiv.appendChild(createFooter());
+function createLandingPage() {
+    clearPage();
+    let contentDiv = document.createElement("div");
+    contentDiv.classList.add('Content');
+    contentDiv.appendChild(createHeader());
+    contentDiv.appendChild(createSection1());
+    contentDiv.appendChild(createSection2());
+    contentDiv.appendChild(createSection3());
+    contentDiv.appendChild(createFooter());
+    document.body.appendChild(contentDiv);
+}
 
-document.body.appendChild(contentDiv);
+function clearPage(){
+    document.body.textContent=""
+}
 
 
-// document.body.appendChild(createSection2());
+createLandingPage();
 
 
 
