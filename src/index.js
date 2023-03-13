@@ -64,9 +64,73 @@ function createSection1() {
     return section1Div;
 }
 
+
+function createSection2() {
+    let section2 = document.createElement("div");
+    let section2Content = document.createElement("div");
+    let leftSide = document.createElement("div");
+    let leftSideTitleDiv = document.createElement("div");
+    let leftSideTitle = document.createElement("div");
+    let leftSideTitle2 = document.createElement("div");
+
+    let leftSideText = document.createElement("div");
+    let paragraph1 = document.createElement("p");
+    let paragraph2 = document.createElement("p");
+
+    let rightSide = document.createElement("div");
+    let img1 = document.createElement("img");
+    let img2 = document.createElement("img");
+
+    img1.src = "./be92fbb6cb9b04656d9b.jpg";
+    img2.src = "./61e4c40dcd1384d48878.jpg";
+
+
+    leftSideTitle.innerText = "Discover"
+    leftSideTitle2.innerText = "Our Story"
+
+    paragraph1.innerText = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam, consequatur dolores\n" +
+        "                       molestiae quaerat quisquam quos. Consequatur esse excepturi impedit minus possimus quo repellat\n" +
+        "                   tempore!"
+
+    paragraph2.innerText = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid amet atque enim eos et\n" +
+        "                       illum numquam sunt voluptatem? Aspernatur consectetur dignissimos laborum soluta? Aspernatur\n" +
+        "                       atque, consequuntur dignissimos dolor doloribus ducimus eligendi esse est expedita fugiat fugit>\n" +
+        "                       ipsa labore libero minima molestiae nemo optio quae quaerat quibusdam quod ratione tempora\n" +
+        "                    voluptatum? Amet autem doloremque odit optio, quisquam rerum tempore voluptas?"
+
+
+    leftSideTitleDiv.appendChild(leftSideTitle);
+    leftSideTitleDiv.appendChild(leftSideTitle2);
+    leftSide.appendChild(leftSideTitleDiv);
+
+    leftSideText.appendChild(paragraph1);
+    leftSideText.appendChild(paragraph2);
+    leftSide.appendChild(leftSideText);
+
+    rightSide.appendChild(img1);
+    rightSide.appendChild(img2);
+
+
+    section2Content.appendChild(leftSide);
+    section2Content.appendChild(rightSide);
+
+    section2.appendChild(section2Content);
+
+    section2.classList.add("section-2");
+    section2Content.classList.add("section-2-content");
+    leftSide.classList.add("left-side");
+    rightSide.classList.add("right-side")
+    return section2;
+}
+
 contentDiv.appendChild(createHeader());
 contentDiv.appendChild(createSection1());
+contentDiv.appendChild(createSection2())
+
 document.body.appendChild(contentDiv);
+
+
+// document.body.appendChild(createSection2());
 
 
 

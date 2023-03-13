@@ -62,7 +62,7 @@ body {
 
 /*header/footer stuff*/
 
-/*sections stuff*/
+/*section1 stuff*/
 
 .section-1 {
     display: flex;
@@ -81,7 +81,7 @@ body {
 }
 
 
-/*sections stuff*/
+
 
 /*booking div stuff*/
 
@@ -129,18 +129,20 @@ body {
 
 /*booking div stuff*/
 
+/*section1 stuff*/
 ul {
     list-style: none;
 
 }
-
+/*section 2 stuff*/
 .section-2 img {
     height: 25rem;
-    width: 100%;
+    width: 35rem;
+
 
 }
 
-/*section 2 stuff*/
+
 .section-2 {
     box-sizing: border-box;
     display: flex;
@@ -148,12 +150,17 @@ ul {
     justify-content: center;
     width: 100%;
 
+
+
+
 }
 
 .section-2-content {
+
     display: flex;
     gap: 20px;
-    /* justify-content: center;*/
+
+
 }
 
 
