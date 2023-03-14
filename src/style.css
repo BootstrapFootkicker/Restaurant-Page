@@ -51,6 +51,11 @@ body {
 
 }
 
+.name-div{
+    display: flex;
+    gap: 20px
+}
+
 
 .footer-container {
     display: flex;
@@ -229,3 +234,5 @@ ul {
 
     padding: 20px;
 }
+
+

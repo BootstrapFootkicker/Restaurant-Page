@@ -6,6 +6,8 @@ function createHeader() {
 
     let headerDiv = document.createElement("header");
     let headerNameDiv = document.createElement("div");
+    let headerName = document.createElement("div");
+    let headerLeftLink = document.createElement("a");
     let headerLinkDiv = document.createElement("ul");
     let headerLinkOne = document.createElement('li')
     let headerLinkTwo = document.createElement('li')
@@ -14,18 +16,28 @@ function createHeader() {
     headerDiv.classList.add('header-container');
     headerNameDiv.classList.add('name-div');
     headerLinkDiv.classList.add('header-links');
+    headerLeftLink.classList.add('home-link');
 
+    headerLeftLink.href = onclick = function (e) {
+        createLandingPage();
+        e.preventDefault();
 
-    headerNameDiv.innerText = 'WAFFLES 101';
+    }
+
+    headerName.innerText = 'WAFFLES 101';
     headerLinkOne.innerText = 'OUR MENU';
     headerLinkTwo.innerText = 'LOCATIONS';
+    headerLeftLink.innerText = 'HOME'
 
 
     headerLinkDiv.appendChild(headerLinkOne);
     headerLinkDiv.appendChild(headerLinkTwo);
+
+    headerNameDiv.appendChild(headerName);
+    headerNameDiv.appendChild(headerLeftLink);
+
     headerDiv.appendChild(headerNameDiv);
     headerDiv.appendChild(headerLinkDiv)
-
 
     return headerDiv
 }
@@ -220,15 +232,20 @@ function createLandingPage() {
     contentDiv.appendChild(createSection3());
     contentDiv.appendChild(createFooter());
     document.body.appendChild(contentDiv);
+
+    // let waffles101 = document.querySelector('.name-div');
+    //
+    // waffles101.addEventListener('click', () => {
+    //     createLandingPage();
+    //     alert("it works")
+    // });
 }
 
-function clearPage(){
-    document.body.textContent=""
+function clearPage() {
+    document.body.textContent = ""
 }
 
 
 createLandingPage();
-
-
 
 
