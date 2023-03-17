@@ -9,7 +9,7 @@ function createHeader() {
     let headerName = document.createElement("div");
     let headerLeftLink = document.createElement("a");
     let headerLinkDiv = document.createElement("ul");
-    let headerLinkOne = document.createElement('li')
+    let headerLinkOne = document.createElement('a')
     let headerLinkTwo = document.createElement('li')
 
 
@@ -18,11 +18,16 @@ function createHeader() {
     headerLinkDiv.classList.add('header-links');
     headerLeftLink.classList.add('home-link');
 
-    headerLeftLink.href = onclick = function (e) {
-        createLandingPage();
-        e.preventDefault();
 
-    }
+    headerLinkOne.addEventListener('click',function (event){
+        event.preventDefault();
+        createMenuPage();
+    })
+
+        headerLeftLink.addEventListener('click',function (event){
+        event.preventDefault();
+        createLandingPage();
+    })
 
     headerName.innerText = 'WAFFLES 101';
     headerLinkOne.innerText = 'OUR MENU';
@@ -233,12 +238,86 @@ function createLandingPage() {
     contentDiv.appendChild(createFooter());
     document.body.appendChild(contentDiv);
 
-    // let waffles101 = document.querySelector('.name-div');
-    //
-    // waffles101.addEventListener('click', () => {
-    //     createLandingPage();
-    //     alert("it works")
-    // });
+
+
+}
+
+function createMenuImgs() {
+    let imgArray = [];
+    imgArray[0] = new Image();
+    imgArray[0].src = "./6ed83724a34adf718358.jpg"
+
+    imgArray[1] = new Image();
+    imgArray[1].src = "./5d958a008820ddcdd5ff.jpg"
+
+
+    imgArray[2] = new Image();
+    imgArray[2].src = "./6ed83724a34adf718358.jpg"
+
+    imgArray[3] = new Image();
+    imgArray[3].src = "./8f40ac4b28cf5d1fdabe.png"
+
+
+    imgArray[4] = new Image();
+    imgArray[4].src = "./926fbab92541218bfef9.jpg"
+
+    imgArray[5] = new Image();
+    imgArray[5].src = "./074271322c6bade3de34.jpg"
+
+    imgArray[6] = new Image();
+    imgArray[6].src = "./dfd605623cf925eec06d.jpg"
+
+    imgArray[7] = new Image();
+    imgArray[7].src = "./6cef3d9ede126cbcdd4d.jpg"
+
+
+    return imgArray
+
+}
+
+function createMenuDiv() {
+    let menuImageArray = createMenuImgs();
+    let menuContainer = document.createElement('div');
+    let menuDiv = document.createElement('div');
+    menuDiv.classList.add("menu-container");
+    menuContainer.classList.add('tester');
+
+
+    for (let i = 0; i < menuImageArray.length; i++) {
+        let menuItem = document.createElement('div')
+        let menuItemTitle = document.createElement('div')
+        let menuText = document.createElement("div");
+        let img = menuImageArray[i];
+
+        menuItem.classList.add("menu-item");
+        menuItemTitle.classList.add('menu-item-title');
+        menuText.classList.add('menu-text');
+
+        menuItemTitle.innerText = 'Lorem ipsum';
+        menuText.innerText = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, iure.'
+
+        menuItem.appendChild(menuItemTitle);
+        menuItem.appendChild(img);
+        menuItem.appendChild(menuText);
+        menuDiv.appendChild(menuItem);
+        menuContainer.appendChild(menuDiv);
+
+    }
+    return menuContainer;
+
+}
+
+function createMenuPage() {
+    clearPage();
+    let contentDiv = document.createElement("div");
+    contentDiv.classList.add('Content');
+    contentDiv.appendChild(createHeader());
+    contentDiv.appendChild(createSection1());
+    contentDiv.appendChild(createMenuDiv());
+    contentDiv.appendChild(createSection3());
+    contentDiv.appendChild(createFooter());
+    document.body.appendChild(contentDiv);
+
 }
 
 function clearPage() {
@@ -247,5 +326,4 @@ function clearPage() {
 
 
 createLandingPage();
-
 
